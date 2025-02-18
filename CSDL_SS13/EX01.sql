@@ -14,6 +14,7 @@ INSERT INTO accounts (account_name, balance) VALUES
 ('Trần Thị Bảy', 500.00);
 
 -- 3
+set autocommit = 0;
 DELIMITER &&
 
 create procedure transfer_money(
