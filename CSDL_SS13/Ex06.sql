@@ -11,6 +11,7 @@ create table enrollments_history(
 
 
 -- 3
+set autocommit = 0;
 DELIMITER &&
 
 create procedure enroll_student_with_history(
