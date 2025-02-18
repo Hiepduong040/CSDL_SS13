@@ -30,6 +30,7 @@ INSERT INTO employees (emp_name, salary) VALUES
 ('Phạm Văn Em', 3800.00);
 
 -- 2
+set autocommit = 0;
 DELIMITER &&
 
 create procedure transfer_salary(
