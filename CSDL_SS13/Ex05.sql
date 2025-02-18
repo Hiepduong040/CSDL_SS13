@@ -42,19 +42,21 @@ INSERT INTO employees (emp_name, salary) VALUES
                             - ghi log bảng transaction_log
                             - commit 
 */
+-- 2
 create table transaction_log (
 	log_id int primary key auto_increment,
     log_message text not null,
     log_time timestamp default current_timestamp
 ) engine = 'MyISAM';
 drop procedure sendsalaryemployee ; 
+-- 3
 alter table transaction_log
 add column last_pay_date date;
+-- 4
 set autocommit = 0;
-
 DELIMITER &&
 
-create procedure sendsalaryemployee(
+create procedure transfer_salary(
     in employeeid int,
     in fundid int
 )
@@ -99,4 +101,4 @@ select * from employees;
 select * from transaction_log;
 select * from payroll;
 
-call sendsalaryemployee(1,1);
+call transfer_salary(1,1);
