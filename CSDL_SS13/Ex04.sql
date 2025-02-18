@@ -24,6 +24,7 @@ INSERT INTO courses (course_name, available_seats) VALUES
 ('Cơ sở dữ liệu', 22);
 
 -- 2
+set autocommit = 0;
 DELIMITER &&
 
 create procedure register_course(
