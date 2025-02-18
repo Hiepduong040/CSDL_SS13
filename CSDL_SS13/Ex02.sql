@@ -23,6 +23,7 @@ INSERT INTO products (product_name, price, stock) VALUES
 
 
 -- 2
+set autocommit = 0;
 DELIMITER &&
 drop procedure if exists place_order;
 
